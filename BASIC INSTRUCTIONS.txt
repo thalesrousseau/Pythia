@@ -1,5 +1,5 @@
-# LEIA-ME #
-# READ ME #
+# INSTRUÇÕES BÁSICAS #
+# BASIC INSTRUCTIONS #
 #
 # As variáveis ​​de ambiente contêm informações sensíveis e precisam ser
 # criadas dentro do arquivo '/ etc / environment' no computador servidor, após
