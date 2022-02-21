@@ -1,0 +1,62 @@
+# LEIA-ME #
+# READ ME #
+#
+# As variáveis ​​de ambiente contêm informações sensíveis e precisam ser
+# criadas dentro do arquivo '/ etc / environment' no computador servidor, após
+# a criação das variáveis ​​é necessário reiniciar a máquina para que as
+# alterações sejam assimiladas pelo sistema.
+# Environment variables contain sensitive information and need to be created
+# inside '/etc/environment' file on server computer, after creation of
+# variables it is necessary to reboot the machine for the changes to be
+# assimilated by the system.
+#
+# As seguintes bibliotecas precisam ser instaladas para o programa rodar:
+#  1. selenium
+#  2. google-api-python-client
+#  3. google-auth-httplib2
+#  4. google-auth-oauthlib
+#  5. launchpadlib
+# The following libraries must be installed for the program to run:
+#  1. selenium
+#  2. google-api-python-client
+#  3. google-auth-httplib2
+#  4. google-auth-oauthlib
+#  5. launchpadlib
+#
+# Os seguintes programas de terceiros devem ser instalados para o programa rodar:
+#  1. Google Chrome
+#  2. Chromedriver
+# The following third-party programs must be installed for the program to run:
+#  1. Google Chrome
+#  2. Chromedriver
+#
+# A chave 'token' para autenticação dos serviços do Google é definida de acordo
+# com a API e com o escopo de dados usados pelo programa. Ao alterar os escopos
+# é preciso excluir a chave 'token', os escopos podem ser encontrados em
+# 'https://developers.google.com/workspace/guides/identify-scopes' e devem ser
+# declarados entre colchetes '[]'. Há um limite máximo para o quanto o 'token'
+# pode ser reativado.
+# The 'token' key for authentication of Google services is set accordingly with
+# O arquivo 'token.json' armazena os tokens de acesso e atualização do usuário,
+# e é criado automaticamente quando a sequência de autorização é concluída pela
+# primeira vez.
+# the API and with the data scope used by the program. When changing scopes
+# need to delete key 'token.json', scopes can be found in
+# 'https://developers.google.com/workspace/guides/identify-scopes' and must be
+# declared between brackets '[]'.
+# The file 'token.json' stores the user's access and refresh tokens, and is
+# created automatically when the authorization flow completes for the first
+# time. There is a maximum limit to how much the 'token' can be re-enabled.
+#
+# A função 'create_email' suporta a criação de mensagens sem anexo,
+# bastando colocar no espaço correspondente a "FILE" um objeto vazio ou
+# "None"
+# The 'create_email' function supports the creation of messages without
+# attachment, just put in the space corresponding to "FILE" an empty object
+# or "None"
+#
+# Para realizar buscas por arquivos dentro do serviço de armazenamento em nuvem
+# é necessário fornecer o nome completo do arquivo, inclusive o formato, caso
+# houver algum.
+# To search for files within the cloud storage service is required to provide
+# the full name of the file, including the format, if there is any.
