@@ -1,14 +1,14 @@
 # INSTRUÇÕES BÁSICAS #
 # BASIC INSTRUCTIONS #
 #
-# As variáveis ​​de ambiente contêm informações sensíveis e precisam ser
-# criadas dentro do arquivo '/ etc / environment' no computador servidor, após
-# a criação das variáveis ​​é necessário reiniciar a máquina para que as
-# alterações sejam assimiladas pelo sistema.
-# Environment variables contain sensitive information and need to be created
-# inside '/etc/environment' file on server computer, after creation of
-# variables it is necessary to reboot the machine for the changes to be
-# assimilated by the system.
+# As variáveis ​​de ambiente contêm informações sensíveis ao funcionamento do
+# programa.Em ambientes linux, elas precisam ser criadas dentro do arquivo
+# '/ etc / environment', após a criação das variáveis ​​é necessário reiniciar
+# a máquina para que as alterações sejam assimiladas pelo sistema.
+# Environment variables contain sensitive information to the functioning of the
+# program. In linux environments, they need to be created inside the file
+# '/etc/environment', after creating the variables it is necessary to restart
+# the machine so that the changes are assimilated by the system.
 #
 # As seguintes bibliotecas precisam ser instaladas para o programa rodar:
 #  1. selenium
