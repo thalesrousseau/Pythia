@@ -1,0 +1,28 @@
+# Documentation #
+#
+# Os seguintes programas de terceiros devem ser instalados para o programa rodar:
+#  1. Google Chrome
+#  2. Chromedriver
+# The following third-party programs must be installed for the program to run:
+#  1. Google Chrome
+#  2. Chromedriver
+#
+# Environment variables provide sensitive information for the correct functioning of the program.
+# It is necessary to create two environment variables to perform the integration with the services
+# from Gmail and Google Drive. These are PROGRAM_IDENTIFIER and PROGRAM_KEY. In linux environments,
+# they are stored inside the '/etc/environment' file. In Windows environments, they are stored inside
+# 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment'. After creation of
+# the variables it is necessary to restart the machine for the changes to be assimilated by the system.
+# The 'token' key for authentication of Google services is set accordingly with
+#
+# The 'token' key for authentication of Google services is defined according to the API and the scope
+# of data used by the program. When changing the scopes it is necessary to create a new key 'token',
+# the scopes can be found in 'https://developers.google.com/workspace/guides/identify-scopes' and
+# must be declared between square brackets '[]' in the program. The 'token.json' file stores the access
+# tokens and user update, and is created automatically when the authorization sequence is completed by
+# the first time. There is a limit to how much the 'token' can be reactivated and the process needs to
+# be repeated.
+#
+# The 'create_email' function supports the creation of messages without attachment, simply placing
+# an empty object or "None" in the space corresponding to "FILE". To search for files within the cloud
+# storage service, it is necessary to provide the full name of the file, including the format, if any.

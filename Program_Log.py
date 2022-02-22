@@ -27,5 +27,5 @@ def program_log(MESSAGE):
         os.mkdir(f'{program_path()}/logs')
 
     # Writing the Log file
-    with open(f'{program_path()}/logs/[{date}] - log.txt', 'a') as file:
+    with open(f'{program_path()}/logs/[{date}] - pythia log.txt', 'a') as file:
         file.write(f'[{time}] - {MESSAGE}\n')
