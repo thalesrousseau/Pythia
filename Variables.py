@@ -32,14 +32,15 @@ def files():
     An object containing a string with the path to the files.
     """
     # Getting variable 'HOME'
-    files = f"{os.environ('HOME')}/pythia"
+    files = os.environ.get('HOME') + '/pythia'
 
     # Creating a folder to store analysis files
     if not os.path.exists(files):
-        os.mkdir(f"{files}/pythia")
-    log('Variável FILES importada')
+        os.mkdir(files)
+        log('Pasta PYTHIA criada em HOME ')
 
     # Exporting variable 'FILES'
+    log('Variável FILES importada')
     return(files)
 
 
@@ -69,7 +70,7 @@ def token():
     An object containing a string with password.
     """
     # Getting variable 'PYTHIA_TOKEN'
-    token = os.environ.get('PYHTIA_TOKEN')
+    token = os.environ.get('PYTHIA_TOKEN')
     if not os.path.exists(token):
         log('Variável TOKEN não designada')
 

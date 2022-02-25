@@ -1,6 +1,6 @@
 """Module to save messages in a log file."""
 
-# PROGRAM_LOG #
+# LOG #
 #
 # Importing libraries
 import datetime
@@ -8,7 +8,7 @@ import os
 
 
 # Creating 'system_log' function
-def program_log(MESSAGE):
+def log(MESSAGE):
     """Save a string message with date and time in log file.
 
     Args:
