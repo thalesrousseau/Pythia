@@ -1,6 +1,6 @@
 """Module to store string variables used many times through the program."""
 
-# VARIABLES #
+# PROGRAM_VARIABLES #
 #
 # Importing libraries
 import os
@@ -32,12 +32,12 @@ def program_files():
     An object containing a string with the path to the files.
     """
     # Getting variable 'HOME'
-    files = os.environ.get('HOME') + '/pythia'
+    files = os.environ.get('HOME') + '/Pythia/Files'
 
     # Creating a folder to store analysis files
     if not os.path.exists(files):
         os.mkdir(files)
-        write_log('Pasta PYTHIA criada em HOME ')
+        write_log('Pasta FILES criada em /HOME/PYTHIA')
 
     # Exporting variable 'FILES'
     write_log('Variável PROGRAM_FILES importada')
