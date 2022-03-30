@@ -20,9 +20,11 @@ def update_database():
 
     url = 'https://bvmf.bmfbovespa.com.br/InstDados/InformacoesEmpresas/ClassifSetorial.zip'
     content = BytesIO(requests.get(url, verify=False).content)
-    zip = zipfile.ZipFile(content)
-    zip.extractall(database)
-    data = pandas.read_excel(database)
+    zipdata = zipfile.ZipFile(content)
+    zipinfo = zipdata.infolist()
+    zipdata.extractall(database)
+    # data = pandas.read_excel(zipinfo)
 
 
-a = update_database()
+a = program_path()
+print(a)
