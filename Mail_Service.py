@@ -9,22 +9,14 @@ import json
 from email.message import EmailMessage
 
 # Importing modules
-<<<<<<< HEAD
 from Google_Server import connect_server
-from Program_Variables import program_files
+from Program_Variables import program_folder
 from Program_Variables import admin_login
-=======
-from Program_Variables import program_files
->>>>>>> 04837fcaaaea258527f0c0af1d7fa5d0bc2b5a29
 from Event_Logs import write_log
 
 
 # Creating 'create_message' function
-<<<<<<< HEAD
 def create_message(TO, SUBJECT, MESSAGE_TEXT, FILE):
-=======
-def create_message(SENDER, TO, SUBJECT, MESSAGE_TEXT, FILE):
->>>>>>> 04837fcaaaea258527f0c0af1d7fa5d0bc2b5a29
     """Create a message for an email.
 
     Args:
@@ -42,11 +34,7 @@ def create_message(SENDER, TO, SUBJECT, MESSAGE_TEXT, FILE):
 
     # Writing email attributes
     message['To'] = ', '.join(TO)
-<<<<<<< HEAD
     message['From'] = admin_login()
-=======
-    message['From'] = SENDER
->>>>>>> 04837fcaaaea258527f0c0af1d7fa5d0bc2b5a29
     message['Subject'] = SUBJECT
 
     # Writing email message
@@ -66,20 +54,12 @@ def create_message(SENDER, TO, SUBJECT, MESSAGE_TEXT, FILE):
             mime_type, mime_subtype = mime_type.split('/')
 
             # Getting file for attachment
-<<<<<<< HEAD
-            with open(f'{program_files()}/{file}', 'rb') as attachment:
-=======
-            with open(f'{program_files()}/Files/{file}', 'rb') as attachment:
->>>>>>> 04837fcaaaea258527f0c0af1d7fa5d0bc2b5a29
+            with open(f'{program_folder()}/{file}', 'rb') as attachment:
 
                 # Attaching files
                 message.add_attachment(attachment.read(), maintype=mime_type,
                                        subtype=mime_subtype, filename=file)
-<<<<<<< HEAD
                 write_log('Arquivo anexado a mensagem')
-=======
-                write_log(f'Arquivo "{file}" anexado')
->>>>>>> 04837fcaaaea258527f0c0af1d7fa5d0bc2b5a29
 
         # Encoding email message in 'base64'
     raw_message = base64.urlsafe_b64encode(message.as_string().encode("utf-8"))
@@ -89,11 +69,7 @@ def create_message(SENDER, TO, SUBJECT, MESSAGE_TEXT, FILE):
 
 
 # Creating 'send_email' function
-<<<<<<< HEAD
 def send_email(SUBJECT, MESSAGE):
-=======
-def send_email(SERVICE_SESSION, SUBJECT, MESSAGE):
->>>>>>> 04837fcaaaea258527f0c0af1d7fa5d0bc2b5a29
     """Send an email message.
 
     Args:
@@ -104,7 +80,6 @@ def send_email(SERVICE_SESSION, SUBJECT, MESSAGE):
     Returns:
       Sent email message.
     """
-<<<<<<< HEAD
     # Creating a session on the server
     api_service = 'gmail'
     api_version = 'v1'
@@ -114,11 +89,6 @@ def send_email(SERVICE_SESSION, SUBJECT, MESSAGE):
     # Sending email message
     try:
         message = server_session.users().messages().send(
-=======
-    # Sending email message
-    try:
-        message = SERVICE_SESSION.users().messages().send(
->>>>>>> 04837fcaaaea258527f0c0af1d7fa5d0bc2b5a29
             userId='me', body=MESSAGE).execute()
         write_log('Mensagem de email enviada')
         write_log('Código da mensagem: "%s"' % message['id'])

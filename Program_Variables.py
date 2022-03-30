@@ -25,19 +25,14 @@ def program_path():
 
 
 # Creating 'program_files' function
-def program_files():
+def program_folder():
     """Export the path where the program files are stored.
 
     Returns:
     An object containing a string with the path to the files.
     """
     # Getting variable 'HOME'
-    files = os.environ.get('HOME') + '/Pythia/Files'
-
-    # Creating a folder to store analysis files
-    if not os.path.exists(files):
-        os.mkdir(files)
-        write_log('Pasta FILES criada em /HOME/PYTHIA')
+    files = os.environ.get('HOME') + '/Pythia'
 
     # Exporting variable 'FILES'
     write_log('Variável PROGRAM_FILES importada')

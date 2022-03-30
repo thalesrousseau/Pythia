@@ -8,7 +8,7 @@ import mimetypes
 from apiclient.http import MediaFileUpload
 
 # Importing modules
-from Program_Variables import program_files
+from Program_Variables import program_folder
 from Google_Server import connect_server
 from Event_Logs import write_log
 
@@ -138,7 +138,7 @@ def upload_file(PARENT_DIRECTORY, FILE):
                          'mimeType': mime_type}
 
     # Getting file location
-    media = MediaFileUpload(f'{program_files()}/{FILE}',
+    media = MediaFileUpload(f'{program_folder()}/{FILE}',
                             mimetype=f'{mime_type}/{mime_subtype}')
     # Uploading the file to the cloud
 
