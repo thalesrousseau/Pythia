@@ -24,7 +24,7 @@ def program_path():
     return(path)
 
 
-# Creating 'program_files' function
+# Creating 'program_folder' function
 def program_folder():
     """Export the path where the program files are stored.
 

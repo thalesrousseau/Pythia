@@ -1,6 +1,7 @@
 """."""
 
-# Stock_Database #
+
+# Assets_Database #
 #
 # Importing libraries
 import requests
@@ -16,15 +17,18 @@ from Program_Variables import program_path
 def update_database():
     """."""
     # Getting variable 'HOME'
-    database = program_path() + '/database'
+    database = program_path() + '/resources'
 
     url = 'https://bvmf.bmfbovespa.com.br/InstDados/InformacoesEmpresas/ClassifSetorial.zip'
     content = BytesIO(requests.get(url, verify=False).content)
     zipdata = zipfile.ZipFile(content)
-    zipinfo = zipdata.infolist()
-    zipdata.extractall(database)
-    # data = pandas.read_excel(zipinfo)
+    zipname = zipdata.namelist()
+    # zipdata.extractall(database)
+    # dataframe = pandas.read_excel(f'{database}/{zipname[0]}')
+    b = print(database)
+    return(b)
 
 
-a = program_path()
-print(a)
+a = update_database()
+# fundos
+# https://sistemaswebb3-listados.b3.com.br/fundsPage/7

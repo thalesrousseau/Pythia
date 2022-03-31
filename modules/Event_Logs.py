@@ -20,7 +20,7 @@ def write_log(MESSAGE):
     time = date_time.strftime('%X')
 
     # Getting current directory
-    cwd = os.getcwd() + '/pythia'
+    cwd = os.getcwd() + '/modules'
 
     # Creating a folder to store log files
     if not os.path.exists(f'{cwd}/logs'):
