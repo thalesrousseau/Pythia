@@ -15,7 +15,13 @@ from Program_Variables import program_path
 
 
 def update_database():
+<<<<<<< HEAD:modules/Assets_Database.py
     database = program_path()
+=======
+    """."""
+    # Getting variable 'HOME'
+    database = program_path() + '/resources'
+>>>>>>> d4f47740da4240fffd623f97fe6e43581887cbdb:pythia/Stock_Database.py
 
     url = 'https://bvmf.bmfbovespa.com.br/InstDados/InformacoesEmpresas/ClassifSetorial.zip'
     content = BytesIO(requests.get(url, verify=False).content)
